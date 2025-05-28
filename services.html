@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमारी सेवाएं - श्री गौशाला पिलानी</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FE5D26;
+            --background-color: #FFFDF6;
+            --text-color: #000000;
+            --nav-color: rgba(254, 93, 38, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            color: white;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cow-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-family: 'Mukta', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.3rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .services-section {
+            padding: 4rem 2rem;
+            background-color: var(--background-color);
+        }
+
+        .services-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .services-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .service-item {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .service-item p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .service-item ul {
+            list-style-type: none;
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .service-item li {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .service-item li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        .service-conclusion {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: rgba(254, 93, 38, 0.1);
+            border-radius: 10px;
+        }
+
+        .service-conclusion p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        .full-services {
+            padding-top: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="images/cow.jpeg" alt="गाय" class="cow-image">
+                <div class="logo">श्री गौशाला पिलानी</div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">होम</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="services.html">हमारी सेवाएं</a></li>
+                <li><a href="saptrishi.html">सप्तऋषि/सप्तलोक</a></li>
+                <li><a href="donate.html">दान करें</a></li>
+                <li><a href="contact.html">संपर्क करें</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="services-section full-services">
+        <div class="services-content">
+            <h2>हमारी सेवाएं</h2>
+            <div class="service-item">
+                <h3>🐄 गौ आश्रय एवं पुनर्वास</h3>
+                <p>हम त्यागी, घायल और बूढ़ी गायों को सुरक्षित और प्रेमपूर्ण आश्रय प्रदान करते हैं। हमारी गौशाला में प्रत्येक पशु को पौष्टिक चारा, स्वच्छ जल और चौबीसों घंटे पशु चिकित्सा देखभाल मिलती है। हमारा उद्देश्य इन पवित्र प्राणियों को सम्मानजनक और शांतिपूर्ण जीवन प्रदान करना है।</p>
+            </div>
+
+            <div class="service-item">
+                <h3>🧴 गौ उत्पाद</h3>
+                <p>हम नैतिक तरीके से गौ उत्पाद और गौ-आधारित उप-उत्पाद बनाते हैं, जिनमें शामिल हैं:</p>
+                <ul>
+                    <li>जैविक खाद और वर्मीकम्पोस्ट</li>
+                    <li>गौमूत्र आधारित उत्पाद</li>
+                    <li>पंचगव्य उत्पाद</li>
+                    <li>प्राकृतिक कीटनाशक</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>🌿 कृषि शिक्षा</h3>
+                <p>हम किसानों को जैविक खेती और गौ-आधारित कृषि के बारे में शिक्षित करते हैं। हमारे प्रशिक्षण कार्यक्रम में शामिल हैं:</p>
+                <ul>
+                    <li>जैविक खेती तकनीकें</li>
+                    <li>गौ-आधारित प्राकृतिक खेती</li>
+                    <li>कम्पोस्ट और वर्मीकम्पोस्ट निर्माण</li>
+                    <li>प्राकृतिक कीट नियंत्रण</li>
+                </ul>
+            </div>
+
+            <div class="service-item">
+                <h3>📚 जन जागरूकता</h3>
+                <p>हम गौ संरक्षण और पर्यावरण संरक्षण के महत्व के बारे में जागरूकता फैलाते हैं। हमारी गतिविधियों में शामिल हैं:</p>
+                <ul>
+                    <li>शैक्षिक कार्यशालाएं</li>
+                    <li>स्कूल आउटरीच कार्यक्रम</li>
+                    <li>सामुदायिक कार्यक्रम</li>
+                    <li>पर्यावरण जागरूकता अभियान</li>
+                </ul>
+            </div>
+
+            <div class="service-conclusion">
+                <p>हमारी सेवाएं गौ माता की देखभाल और संरक्षण के साथ-साथ समाज के लिए लाभकारी हैं।</p>
+                <p>आप भी इस पुनीत कार्य में सहयोग कर सकते हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
+        <p>संपर्क: info@pilanigaushala.org</p>
+    </footer>
+</body>
+</html>

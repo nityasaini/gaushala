@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दान करें - श्री गौशाला पिलानी</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FE5D26;
+            --background-color: #FFFDF6;
+            --text-color: #000000;
+            --nav-color: rgba(254, 93, 38, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            color: white;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cow-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-family: 'Mukta', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.3rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .donate-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .donate-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .donate-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .donation-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .donation-item h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .donation-item p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .donate-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .bank-details {
+            background-color: rgba(254, 93, 38, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+
+        .bank-details h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .bank-details p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-family: 'Mukta', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="images/cow.jpeg" alt="गाय" class="cow-image">
+                <div class="logo">श्री गौशाला पिलानी</div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">होम</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="services.html">हमारी सेवाएं</a></li>
+                <li><a href="saptrishi.html">सप्तऋषि/सप्तलोक</a></li>
+                <li><a href="donate.html">दान करें</a></li>
+                <li><a href="contact.html">संपर्क करें</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="donate-section">
+        <div class="donate-content">
+            <h2>दान करें</h2>
+            <p class="donate-intro">आपका दान गौ माता की सेवा में सहायक होगा। आप किसी भी रूप में दान कर सकते हैं।</p>
+
+            <div class="donation-options">
+                <div class="donation-item">
+                    <h3>🌾 गौ चारा दान</h3>
+                    <p>एक दिन का चारा: ₹500<br>
+                    एक सप्ताह का चारा: ₹3,500<br>
+                    एक माह का चारा: ₹15,000</p>
+                    <button class="donate-btn">दान करें</button>
+                </div>
+
+                <div class="donation-item">
+                    <h3>💊 चिकित्सा सहायता</h3>
+                    <p>एक गाय की मासिक दवाई: ₹1,000<br>
+                    आपातकालीन चिकित्सा कोष: ₹5,000</p>
+                    <button class="donate-btn">दान करें</button>
+                </div>
+
+                <div class="donation-item">
+                    <h3>🏥 गौशाला विकास</h3>
+                    <p>गौशाला के बुनियादी ढांचे के विकास में सहयोग करें।<br>
+                    न्यूनतम दान राशि: ₹1,000</p>
+                    <button class="donate-btn">दान करें</button>
+                </div>
+            </div>
+
+            <div class="bank-details">
+                <h3>बैंक विवरण</h3>
+                <p>बैंक का नाम: स्टेट बैंक ऑफ इंडिया</p>
+                <p>खाता धारक का नाम: श्री गौशाला पिलानी</p>
+                <p>खाता संख्या: XXXXX XXXXX XXXXX</p>
+                <p>IFSC कोड: SBIN XXXXX</p>
+                <p>शाखा: पिलानी, राजस्थान</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <h3>QR कोड स्कैन करें</h3>
+                    <img src="images/qr code.svg" alt="Payment QR Code" style="max-width: 200px; margin: 1rem auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
+        <p>संपर्क: info@pilanigaushala.org</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्री गौशाला पिलानी</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FE5D26;
+            --background-color: #FFFDF6;
+            --text-color: #000000;
+            --nav-color: rgba(254, 93, 38, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            color: white;
+            display: flex;
+"            align-items: center;
+"            gap: 1rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cow-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-family: 'Mukta', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.3rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slide.active {
+            opacity: 0.5;  /* Increased opacity for better visibility of background images */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 800px;
+            color: var(--text-color);
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Added text shadow for better readability */
+        }
+
+        .hero h1 {
+            font-family: 'Mukta', sans-serif;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .donation-section {
+            background-color: rgba(254, 93, 38, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .donation-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Mukta', sans-serif;
+            font-weight: 700;
+        }
+
+        .donation-section p {
+            color: var(--text-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        .decorative-text {
+            font-family: 'Mukta', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 1rem 0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="images/cow.jpeg" alt="गाय" class="cow-image">
+                <div class="logo">श्री गौशाला पिलानी</div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">होम</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="services.html">हमारी सेवाएं</a></li>
+                <li><a href="saptrishi.html">सप्तऋषि/सप्तलोक</a></li>
+                <li><a href="donate.html">दान करें</a></li>
+                <li><a href="contact.html">संपर्क करें</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="background-slideshow">
+                <div class="slide" style="background-image: url('images/cow1.jpeg');"></div>
+                <div class="slide" style="background-image: url('images/cow2.jpeg');"></div>
+                <div class="slide" style="background-image: url('images/cow3.jpeg');"></div>
+            </div>
+            <div class="hero-content">
+                <h1>श्री गौशाला पिलानी में आपका स्वागत है</h1>
+                <p class="decorative-text">पवित्र गायॉं की सेवा और संरक्षण</p>
+                <p>प्रेम, देखभाल और सतत प्रथाओं के माध्यम से गायॉं के कल्याण और संरक्षण के लिए समर्पित।</p>
+                <a href="donate.html" target="_blank" class="cta-button">दान करें</a>
+            </div>
+        </section>
+
+        <section class="qualities-section" style="padding: 4rem 2rem; background-color: rgba(254, 93, 38, 0.1);">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="color: var(--primary-color); font-size: 2.5rem; text-align: center; margin-bottom: 3rem; font-weight: 700;">हमारी 9 विशेषताएं</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">1. केवल देशी गायॉं का पालन</h3>
+                        <p>श्री गौशाला में सिर्फ भारतीय मूल की देशी नस्लों जैसे गिर, साहिवाल, थारपारकर आदि गायें पाली जाती हैं, जो भारतीय वातावरण के अनुसार अनुकूल हैं और A2 दूध देती हैं।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2. अपंग और बीमार गायॉं को ���� आश्रय</h3>
+                        <p>यहाँ घायल, वृद्ध या बीमार गायॉं को ���� शरण और आजीवन सेवा दी जाती है, जिससे यह गौशाला करुणा का प्रतीक बनती है।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3. स्वच्छता और सफाई का विशेष ध्यान</h3>
+                        <p>गौशाला में सफाई का विशेष ध्यान रखा जाता है ताकि गायॉं को स्वस्थ और स्वच्छ वातावरण मिले।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">4. प्राकृतिक चारा और खुले में चराई</h3>
+                        <p>गायॉं को हरा चारा, भूसा और जैविक आहार दिया जाता है और उन्हें खुले में चरने की सुविधा भी मिलती है।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">5. आयुर्वेदिक और प्राकृतिक उपचार</h3>
+                        <p>बीमारियों के इलाज में रसायनों की जगह आयुर्वेद और घरेलू उपचारों का प्रयोग किया जाता है।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">6. नियमित पशु चिकित्सकों की जांच</h3>
+                        <p>गायॉं की समय-समय पर पशु चिकित्सकों द्वारा स्वास्थ्य जांच कराई जाती है।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">7. समर्पित गोपालकों की सेवा</h3>
+                        <p>प्रशिक्षित और समर्पित गौपालक (सेवक) गायॉं की सेवा श्रद्धा और प्रेम से करते हैं।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">8. दूध के लिए नहीं, सेवा के लिए पालन</h3>
+                        <p>इस गौशाला में गायॉं का उपयोग सिर्फ दूध के लिए नहीं, बल्कि सेवा और संरक्षण के लिए किया जाता है।</p>
+                    </div>
+                    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">9. गो आधारित उत्पादों का उपयोग</h3>
+                        <p>गोबर और गौमूत्र का उपयोग जैविक खेती और पंचगव्य निर्माण में किया जाता है।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="services-content">
+                <h2>हमारी सेवाएं</h2>
+                <div class="service-item">
+                    <h3>🐄 गौशाला और पुनर्वास</h3>
+                    <p>हम त्यागी, घायल और बूढ़ी गायों को सुरक्षित और प्रेममय घर प्रदान करते हैं। हमारी गौशाला में प्रत्येक पशु को पौष्टिक चारा, स्वच्छ पानी और चौबीसों घंटे पशु चिकित्सा देखभाल मिलती है।</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>🧴 डेयरी और प्राकृतिक गौ उत्पाद</h3>
+                    <p>हम रासायनिक मुक्त, जैविक कृषि को बढ़ावा देने के लिए सीमित, नैतिक डेयरी और गौ-आधारित उप-उत्पादों की एक श्रृंखला का उत्पादन करते हैं।</p>
+                </div>
+
+                <div class="text-center">
+                    <a href="services.html" class="cta-button see-more-btn" target="_blank">और सेवाएं देखें</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section full-services" style="display: none;">
+            <div class="services-content">
+                <h2>हमारी सेवाएं</h2>
+                <div class="service-item">
+                    <h3>🐄 गौशाला और पुनर्वास</h3>
+                    <p>हम त्यागी, घायल और बूढ़ी गायों को सुरक्षित और प्रेममय घर प्रदान करते हैं। हमारी गौशाला में प्रत्येक पशु को पौष्टिक चारा, स्वच्छ पानी और चौबीसों घंटे पशु चिकित्सा देखभाल मिलती हैं हमारा ध्यान इन पवित्र प्राणियों को गरिमापूर्ण और शांतिपूर्ण जीवन प्रदान करने पर हैं।</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>🧴 डेयरी और प्राकृतिक गौ उत्पाद</h3>
+                    <p>हम सीमित, नैतिक डेयरी और गौ-आधारित उप-उत्पादों का उत्पादन करते हैं, जिनमें शामिल हैं:</p>
+                    <ul>
+                        <li>जैविक खाद और वर्मीकम्पोस्ट</li>
+                        <li>गोमूत्र अर्क और पंचगव्य</li>
+                        <li>प्राकृतिक ीटनाशक और निवारक</li>
+                    </ul>
+                    <p>ये उत्पाद स्थानीय किसानों द्वारा रासायनिक मुक्त, जैविक कृषि को बढ़ावा देने के लिए उपयोग किए जाते हैं।</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>🌿 जैविक कृषि और ग्रामीण प्रशिक्षण</h3>
+                    <p>दालमिया रिसर्च एंड हेल्थ केयर संस्थान के साथ साझेदारी में, हम किसानों और युवाओं को प्रशिक्षण प्रदान करते हैं:</p>
+                    <ul>
+                        <li>जैविक और गौ-आधारित कृषि विधियां</li>
+                        <li>कम्पोस्टिंग और मिट्टी सुधार</li>
+                        <li>पारंपरिक कृषि इनपुट का उपयोग</li>
+                    </ul>
+                    <p>हमारी कार्यशालाएं देशी ज्ञान को पुनर्जीवित करने और पर्यावरण अनुकूल प्रथाओं को प्रोत्साहित करने में मदद करती हैं।</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>🛕 धार्मिक और सांस्कृतिक गतिविधियां</h3>
+                    <p>गौशाला एक आध्यात्मिक स्थल भी है जहां भक्त पारंपरिक त्योहारों और अनुष्ठानों के लिए एकत्र होते हैं:</p>
+                    <ul>
+                        <li>पितृ पक्ष श्राद्ध</li>
+                        <li>गोपाष्टमी समारोह</li>
+                        <li>गौ पूजन और भजन संध्या</li>
+                    </ul>
+                    <p>ये कार्यक्रम हमारी सांस्कृतिक जड़ों को जीवंत रखते हैं और समुदाय को भक्ति और सेवा का स्थान प्रदान करते हैं।</p>
+                </div>
+
+                <div class="service-item">
+                    <h3>🤝 सामुदायिक भागीदारी और स्वयंसेवा</h3>
+                    <p>हम स्वयंसेवकों, स्कूलों और सामाजिक समूहों को हमारे दैनिक कार्यों, जागरूकता कार्यक्रमों और स्वच्छता अभियानों में सक्रिय रूप से शामिल करते हैं। आगंतुक गायों को खिलाने, सफाई करने और उनके साथ समय बिताने में भाग ले सकते हैं।</p>
+                </div>
+
+                <div class="service-conclusion">
+                    <p>हमारी हर सेवा एक अधिक करुणामय, सतत और सांस्कृतिक रूप से समृद्ध समाज की दिशा में एक कदम है।</p>
+                    <p>हम दानदाताओं, आगंतुकों और शुभचिंतकों का किसी भी रूप में हमारे कार्य में सहयोग करने के लिए स्वागत करते हैं।</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="contact-section" style="display: flex; justify-content: space-between; padding: 2rem; margin: 2rem; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="contact-info" style="flex: 1; padding-right: 2rem;">
+            <h2 style="color: var(--primary-color); margin-bottom: 1rem;">संपर्क जानकारी</h2>
+            <p style="margin-bottom: 0.5rem;">📍 पता: श्री गौशाला पिलानी, राजस्थान</p>
+            <p style="margin-bottom: 0.5rem;">📞 फोन: +91 XXXXXXXXXX</p>
+            <p style="margin-bottom: 0.5rem;">✉️ ईमेल: info@pilanigaushala.org</p>
+            <p style="margin-bottom: 0.5rem;">⏰ कार्य समय: सुबह 6:00 बजे से शाम 6:00 बजे तक</p>
+        </div>
+        <div class="location-image" style="flex: 1; text-align: right;">
+            <img src="images/location.jpeg" alt="गौशाला का स्थान" style="max-width: 100%; height: auto; border-radius: 10px;">
+            <a href="https://www.google.com/maps/place/Shree+Gaushala/@28.3789289,75.6078038,17z/data=!4m6!3m5!1s0x39131bfac797cf6b:0x56d91ee2ab0be98b!8m2!3d28.3787873!4d75.6100247!16s%2Fg%2F11g9k258_3?hl=en&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" class="cta-button" style="display: inline-block; margin-top: 1rem;" target="_blank">लाइव लोकेशन</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
+        <p>संपर्क: info@pilanigaushala.org</p>
+    </footer>
+    <script>
+        // Auto-sliding functionality
+        const slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Show first slide immediately
+        showSlide(0);
+
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+
+</body>
+</html>
+
+<style>
+    .services-section {
+        padding: 4rem 2rem;
+        background-color: var(--background-color);
+    }
+
+    .services-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .services-content h2 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    .service-item {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-item h3 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    .service-item p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .service-item ul {
+        list-style-type: none;
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .service-item li {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        position: relative;
+    }
+
+    .service-item li:before {
+        content: "•";
+        color: var(--primary-color);
+        position: absolute;
+        left: -1.5rem;
+    }
+
+    .service-conclusion {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 2rem;
+        background-color: rgba(254, 93, 38, 0.1);
+        border-radius: 10px;
+    }
+
+    .service-conclusion p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .text-center {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .see-more-btn {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .full-services {
+        padding-top: 120px; /* Add space for the sticky header */
+    }
+</style>
+
+<script>
+    function openServicesTab(event) {
+        event.preventDefault();
+        
+        // Create a new HTML file content for services page
+        const servicesContent = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Our Services - Shri Gaushala Pilani</title>
+                <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+                <style>${document.querySelector('style').innerHTML}</style>
+            </head>
+            <body>
+                ${document.querySelector('.sticky-wrapper').outerHTML}
+                <div class="services-section full-services">
+                    ${document.querySelector('#services').innerHTML}
+                </div>
+            </body>
+            </html>
+        `;
+
+        // Create a blob and open it in a new tab
+        const blob = new Blob([servicesContent], { type: 'text/html' });
+        const servicesURL = URL.createObjectURL(blob);
+        window.open(servicesURL, '_blank');
+    }
+</script>

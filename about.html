@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमारे बारे में - श्री गौशाला पिलानी</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FE5D26;
+            --background-color: #FFFDF6;
+            --text-color: #000000;
+            --nav-color: rgba(254, 93, 38, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.3rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .cow-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-family: 'Mukta', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .about-section {
+            padding: 4rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .about-intro {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+        }
+
+        .about-item {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-item h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .activities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .activities-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .about-vision {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: rgba(254, 93, 38, 0.1);
+            border-radius: 10px;
+        }
+
+        .about-vision h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-vision p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .vision-conclusion {
+            font-weight: 500;
+            font-size: 1.2rem !important;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-family: 'Mukta', sans-serif;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="images/cow.jpeg" alt="गाय" class="cow-image">
+                <div class="logo">श्री गौशाला पिलानी</div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">होम</a></li>
+                <li><a href="#" onclick="scrollToTop(); return false;">हमारे बारे में</a></li>
+                <li><a href="services.html">हमारी सेवाएं</a></li>
+                <li><a href="saptrishi.html">सप्तऋषि/सप्तलोक</a></li>
+                <li><a href="donate.html">दान करें</a></li>
+                <li><a href="contact.html">संपर्क करें</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="about-section">
+        <div class="about-content">
+            <h2>श्री गौशाला पिलानी के बारे में</h2>
+            <p class="about-intro">श्री गौशाला पिलानी राजस्थान के पिलानी में स्थित गौ सेवा का एक प्रतिष्ठित केंद्र है। 20वीं सदी की शुरुआत में स्थापित, हमारी गौशाला की विरासत करुणा और समाज सेवा की समृद्ध परंपरा पर आधारित है, जो विश्वास, परंपरा और निःस्वार्थ सेवा की नींव पर खड़ी है।</p>
+
+            <div class="about-item">
+                <h3>हमारा मिशन</h3>
+                <p>हमारा मिशन गौ माता की सेवा और संरक्षण के माध्यम से भारतीय संस्कृति और परंपराओं को संरक्षित करना है। हम गायों को सुरक्षित आश्रय, पोषण और चिकित्सा देखभाल प्रदान करते हैं।</p>
+            </div>
+
+            <div class="about-item">
+                <h3>हमारी गतिविधियां</h3>
+                <ul class="activities-list">
+                    <li>गौ संरक्षण और देखभाल</li>
+                    <li>गौशाला में रहने वाली गायों को नियमित चिकित्सा सुविधाएं</li>
+                    <li>गौ आधारित प्राकृतिक खेती को बढ़ावा</li>
+                    <li>गौ उत्पादों का निर्माण और विक्रय</li>
+                    <li>पर्यावरण संरक्षण में योगदान</li>
+                </ul>
+            </div>
+
+            <div class="about-item">
+                <h3>हमारी उपलब्धियां</h3>
+                <p>पिछले कई दशकों से, हमने हजारों गायों की देखभाल की है और समाज में गौ सेवा के महत्व को बढ़ावा दिया है। हमारी गौशाला ने कई पुरस्कार और सम्मान प्राप्त किए हैं।</p>
+            </div>
+
+            <div class="about-vision">
+                <h3>हमारी दृष्टि</h3>
+                <p>हम एक ऐसे समाज की कल्पना करते हैं जहां हर गाय सुरक्षित और स्वस्थ हो, जहां पारंपरिक मूल्यों और आधुनिक विज्ञान का सामंजस्य हो।</p>
+                <p class="vision-conclusion">आइए मिलकर गौ माता की सेवा करें और भारतीय संस्कृति को संरक्षित करें।</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
+        <p>संपर्क: info@pilanigaushala.org</p>
+    </footer>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

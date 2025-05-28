@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संपर्क करें - श्री गौशाला पिलानी</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FE5D26;
+            --background-color: #FFFDF6;
+            --text-color: #000000;
+            --nav-color: rgba(254, 93, 38, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Mukta', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            color: white;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cow-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .logo {
+            font-family: 'Mukta', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.3rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .contact-section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .help-section {
+            grid-column: 1 / -1;
+            background-color: rgba(254, 93, 38, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .help-section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .help-section ul {
+            list-style: none;
+            margin-left: 1rem;
+        }
+
+        .help-section li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .help-section li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            font-family: 'Mukta', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <header>
+            <div class="header-logo">
+                <img src="images/cow.jpeg" alt="गाय" class="cow-image">
+                <div class="logo">श्री गौशाला पिलानी</div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">होम</a></li>
+                <li><a href="about.html">हमारे बारे में</a></li>
+                <li><a href="services.html">हमारी सेवाएं</a></li>
+                <li><a href="saptrishi.html">सप्तऋषि/सप्तलोक</a></li>
+                <li><a href="donate.html">दान करें</a></li>
+                <li><a href="contact.html">संपर्क करें</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-content">
+            <div class="contact-item">
+                <h2>📍 पता</h2>
+                <p>श्री गौशाला, पिलानी</p>
+                <p>पहाड़ी रोड, पिलानी</p>
+                <p>जिला: झुंझुनू, राजस्थान</p>
+                <p>पिन कोड: 333031</p>
+            </div>
+
+            <div class="contact-item">
+                <h2>📞 फोन</h2>
+                <p>मोबाइल: +91-9414612757</p>
+                <p>लैंडलाइन: 02935-237692</p>
+            </div>
+
+            <div class="contact-item">
+                <h2>🕒 मुलाकात का समय</h2>
+                <p>प्रतिदिन सुबह 7:00 बजे से शाम 6:00 बजे तक</p>
+            </div>
+
+            <div class="contact-item">
+                <h2>📧 ईमेल</h2>
+                <p>info@pilanigaushala.org</p>
+            </div>
+
+            <div class="help-section">
+                <h2>🙏 आप कैसे मदद कर सकते हैं</h2>
+                <ul>
+                    <li>दान: आपका योगदान गायों के भोजन, आश्रय और चिकित्सा देखभाल में सहायक होगा।</li>
+                    <li>स्वयंसेवा: अपना समय और कौशल हमारे दैनिक कार्यों में लगाएं।</li>
+                    <li>वस्तु दान: हम चारा, दवाइयां और अन्य सामग्री स्वीकार करते हैं।</li>
+                    <li>गौ गोद: किसी विशेष गाय की देखभाल के लिए सहयोग करें और नियमित अपडेट प्राप्त करें।</li>
+                </ul>
+            </div>
+
+            <div class="contact-item">
+                <h2>📍 हमारी स्थिति</h2>
+                <p>हमारी गतिविधियों और कार्यक्रमों की जानकारी के लिए सोशल मीडिया पर हमें फॉलो करें।</p>
+                <p>किसी भी जानकारी या यात्रा की योजना के लिए, कृपया ऊपर दिए गए संपर्क माध्यमों से संपर्क करें।</p>
+                <p>गौ माता की सेवा के हमारे मिशन में आपके सहयोग की प्रतीक्षा है।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Image Section -->
+    <div style="max-width: 1000px; margin: 2rem auto; padding: 2rem;">
+        <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">गौशाला का दृश्य</h2>
+        <div style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); position: relative;">
+            <a href="https://www.google.com/maps/place/Shree+Gaushala/@28.3789289,75.6078038,17z/data=!4m6!3m5!1s0x39131bfac797cf6b:0x56d91ee2ab0be98b!8m2!3d28.3787873!4d75.6100247!16s%2Fg%2F11g9k258_3?hl=en&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
+                <img src="images/location.jpeg" alt="गौशाला का स्थान" style="width: 100%; height: auto; display: block;">
+                <button style="
+                    position: absolute;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: var(--primary-color);
+                    color: white;
+                    padding: 10px 30px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    font-family: 'Mukta', sans-serif;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                ">लाइव देखें</button>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
+        <p>संपर्क: info@pilanigaushala.org</p>
+    </footer>
+</body>
+</html>
