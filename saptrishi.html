@@ -128,9 +128,132 @@
             padding: 2rem;
             margin-top: 2rem;
         }
+
+        /* Moving text styles */
+        .moving-text-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+
+        .moving-text {
+            display: inline-block;
+            animation: moveText 20s linear infinite;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .moving-text span {
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .moving-text {
+                font-size: 1.2rem;
+                animation: moveText 15s linear infinite;
+            }
+
+            .moving-text-container {
+                padding: 8px 0;
+            }
+        }
+
+        /* Circular arrangement styles */
+        .circle-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 3rem auto;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            padding: 20px;
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            background-color: var(--background-color);
+            padding: 1rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--primary-color);
+        }
+
+        .rishi-name {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            transform-origin: center;
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .rishi-name:hover {
+            transform: scale(1.1) translateX(-10%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .english-names {
+            margin-top: 2rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .circle-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .center-text {
+                width: 90px;
+                height: 90px;
+                font-size: 1rem;
+            }
+
+            .rishi-name {
+                width: 100px;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="moving-text-container">
+        <div class="moving-text">
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+        </div>
+    </div>
     <div class="sticky-wrapper">
         <header>
             <div class="header-logo">
@@ -158,15 +281,17 @@
             <p>सप्तऋषि वे सात महान ऋषि हैं जिन्हें वेदों और भारतीय संस्कृति में अत्यंत सम्मान प्राप्त है। ये ज्ञान, तप, और सृष्टि की रचना में सहायक माने जाते हैं। श्री गौशाला में इन सप्तऋषियों की विशेष पूजा की जाती है।</p>
             
             <h3>सप्तऋषियों के नाम:</h3>
-            <ul>
-                <li>अत्रि</li>
-                <li>भृगु</li>
-                <li>कण्व</li>
-                <li>वशिष्ठ</li>
-                <li>गौतम</li>
-                <li>जमदग्नि</li>
-                <li>विश्वामित्र</li>
-            </ul>
+            <div class="circle-container">
+                <div class="center-text">सप्तऋषि</div>
+                <div class="rishi-name" style="top: 10%; left: 50%; transform: translateX(-50%);">अत्रि</div>
+                <div class="rishi-name" style="top: 25%; right: 10%;">भृगु</div>
+                <div class="rishi-name" style="top: 60%; right: 5%;">कण्व</div>
+                <div class="rishi-name" style="bottom: 10%; right: 25%;">वशिष्ठ</div>
+                <div class="rishi-name" style="bottom: 10%; left: 25%;">गौतम</div>
+                <div class="rishi-name" style="top: 60%; left: 5%;">जमदग्नि</div>
+                <div class="rishi-name" style="top: 25%; left: 10%;">विश्वामित्र</div>
+            </div>
+
             <p>इन ऋषियों को सात दीपों के माध्यम से पूजित किया जाता है, और उनके नामों का उच्चारण वेद मंत्रों के साथ किया जाता है।</p>
         </section>
 
@@ -175,16 +300,18 @@
             <p>सनातन धर्म के अनुसार ब्रह्मांड सात लोकों में विभाजित है। श्री गौशाला में इन सप्तलोकों का प्रतीकात्मक आयोजन किया जाता है, जिसमें हर लोक की अवधारणा को दर्शाया जाता है।</p>
             
             <h3>सप्तलोकों के नाम:</h3>
-            <ul>
-                <li>भूः (पृथ्वी लोक)</li>
-                <li>भुवः (अंतरिक्ष लोक)</li>
-                <li>स्वः (स्वर्ग लोक)</li>
-                <li>महः (महर्लोक)</li>
-                <li>जनः (जनलोक)</li>
-                <li>तपः (तपोलोक)</li>
-                <li>सत्यम् (सत्यलोक)</li>
-            </ul>
-            <p>इन लोकों को दीप, रंगोली, मंत्रोच्चारण और झांकियों के माध्यम से सजीव किया जाता है।</p>
+            <div class="circle-container">
+                <div class="center-text">सप्तलोक</div>
+                <div class="rishi-name" style="top: 10%; left: 50%; transform: translateX(-50%);">भूः लोक</div>
+                <div class="rishi-name" style="top: 25%; right: 10%;">भुवः लोक</div>
+                <div class="rishi-name" style="top: 60%; right: 5%;">स्वः लोक</div>
+                <div class="rishi-name" style="bottom: 10%; right: 25%;">महः लोक</div>
+                <div class="rishi-name" style="bottom: 10%; left: 25%;">जनः लोक</div>
+                <div class="rishi-name" style="top: 60%; left: 5%;">तपः लोक</div>
+                <div class="rishi-name" style="top: 25%; left: 10%;">सत्य लोक</div>
+            </div>
+
+            <p style="margin-top: 2rem;">इन लोकों को दीप, रंगोली, मंत्रोच्चारण और झांकियों के माध्यम से सजीव किया जाता है।</p>
         </section>
 
         <section>

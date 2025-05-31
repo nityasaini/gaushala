@@ -69,6 +69,25 @@
             padding: 1rem;
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -89,6 +108,175 @@
         nav a:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                display: block;
+                padding: 12px;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: none;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .cow-image {
+                width: 50px;
+                height: 50px;
+            }
+
+            header {
+                padding: 0.5rem;
+            }
+
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .decorative-text {
+                font-size: 1.5rem;
+                margin: 0.5rem 0;
+            }
+
+            .qualities-section {
+                padding: 2rem 1rem !important;
+            }
+
+            .qualities-section h2 {
+                font-size: 1.8rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .service-item {
+                padding: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .service-item h3 {
+                font-size: 1.4rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .service-item p {
+                font-size: 1rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .contact-section {
+                flex-direction: column !important;
+                padding: 1rem !important;
+                margin: 1rem !important;
+            }
+
+            .contact-info {
+                padding-right: 0 !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 1rem;
+                margin-top: 1rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            .services-section {
+                padding: 2rem 1rem;
+            }
+
+            .services-content h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .service-conclusion {
+                padding: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .service-conclusion p {
+                font-size: 1rem;
+            }
+
+            .text-center {
+                margin-top: 1rem;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .moving-text {
+                font-size: 1.2rem;
+                animation: moveText 15s linear infinite;
+            }
+
+            .moving-text-container {
+                padding: 8px 0;
+            }
+
+            .bank-details {
+                padding: 1rem;
+                margin: 1rem;
+                font-size: 1rem;
+            }
+
+            .bank-details h3 {
+                font-size: 1.3rem;
+            }
+
+            .bank-details p {
+                font-size: 1rem;
+            }
         }
 
         .hero {
@@ -182,6 +370,34 @@
             color: var(--text-color);
         }
 
+        .bank-details {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .bank-details h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .bank-details p {
+            margin-bottom: 0.5rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .bank-details .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -198,9 +414,119 @@
             margin: 1rem 0;
             font-weight: 600;
         }
+
+        /* Moving text styles */
+        .moving-text-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+
+        .moving-text {
+            display: inline-block;
+            animation: moveText 20s linear infinite;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .moving-text span {
+            display: inline-block;
+            padding-right: 50px;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* News Ticker styles */
+        .news-ticker-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-label {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            z-index: 2;
+            white-space: nowrap;
+        }
+
+        .news-ticker {
+            display: inline-block;
+            animation: tickerMove 30s linear infinite;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .news-item {
+            display: inline-block;
+            padding-right: 50px;
+            position: relative;
+        }
+
+        .news-item:after {
+            content: "●";
+            margin-left: 20px;
+            color: white;
+        }
+
+        @keyframes tickerMove {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .news-ticker {
+                font-size: 1rem;
+                animation: tickerMove 25s linear infinite;
+            }
+
+            .news-label {
+                font-size: 0.9rem;
+                padding: 4px 10px;
+                margin-left: 10px;
+            }
+
+            .news-ticker-container {
+                padding: 8px 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="moving-text-container">
+        <div class="moving-text">
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+        </div>
+    </div>
     <div class="sticky-wrapper">
         <header>
             <div class="header-logo">
@@ -209,6 +535,11 @@
             </div>
         </header>
         <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="index.html">होम</a></li>
                 <li><a href="about.html">हमारे बारे में</a></li>
@@ -244,8 +575,8 @@
                         <p>श्री गौशाला में सिर्फ भारतीय मूल की देशी नस्लों जैसे गिर, साहिवाल, थारपारकर आदि गायें पाली जाती हैं, जो भारतीय वातावरण के अनुसार अनुकूल हैं और A2 दूध देती हैं।</p>
                     </div>
                     <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
-                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2. अपंग और बीमार गायॉं को ���� आश्रय</h3>
-                        <p>यहाँ घायल, वृद्ध या बीमार गायॉं को ���� शरण और आजीवन सेवा दी जाती है, जिससे यह गौशाला करुणा का प्रतीक बनती है।</p>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">2. अपंग और बीमार गायॉं को आश्रय</h3>
+                        <p>यहाँ घायल, वृद्ध या बीमार गायॉं को शरण और आजीवन सेवा दी जाती है, जिससे यह गौशाला करुणा का प्रतीक बनती है।</p>
                     </div>
                     <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
                         <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3. स्वच्छता और सफाई का विशेष ध्यान</h3>
@@ -350,6 +681,27 @@
                 </div>
             </div>
         </section>
+
+        <section class="donation-section">
+            <h2>दान करें</h2>
+            <p>आपका दान गौमाता की सेवा में सहायक होगा</p>
+            <div class="bank-details">
+                <h3>Bank Account Details</h3>
+                <p><span class="highlight">Account Name:</span> Shree Gaushala Pilani</p>
+                <p><span class="highlight">Bank Name:</span> State Bank of India</p>
+                <p><span class="highlight">Account Number:</span> 61132212977</p>
+                <p><span class="highlight">IFSC Code:</span> SBIN0011309</p>
+                <p><span class="highlight">Branch:</span> Pilani, Rajasthan</p>
+                <p><span class="highlight">Account Type:</span> Current Account</p>
+                <p><span class="highlight">UPI ID:</span> gaushala@sbi</p>
+                <p style="margin-top: 1rem; color: var(--primary-color);">* Please mention 'Donation' in the transaction remarks</p>
+                
+                <div class="qr-section">
+                    <!-- Add your QR code image here -->
+                </div>
+            </div>
+            <a href="donate.html" class="cta-button">दान करें</a>
+        </section>
     </main>
 
     <section class="contact-section" style="display: flex; justify-content: space-between; padding: 2rem; margin: 2rem; background-color: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
@@ -390,6 +742,23 @@
 
         // Change slide every 5 seconds
         setInterval(nextSlide, 5000);
+
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
     </script>
 
 </body>

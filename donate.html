@@ -149,23 +149,69 @@
         }
 
         .bank-details {
-            background-color: rgba(254, 93, 38, 0.1);
+            background-color: white;
             padding: 2rem;
             border-radius: 10px;
-            margin-top: 3rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: left;
         }
 
         .bank-details h3 {
             color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
             text-align: center;
         }
 
         .bank-details p {
-            font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .bank-details .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .qr-section {
             text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(254, 93, 38, 0.2);
+        }
+
+        .qr-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .qr-section img {
+            max-width: 200px;
+            margin: 1rem auto;
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bank-details {
+                padding: 1rem;
+                margin: 1rem;
+                font-size: 1rem;
+            }
+
+            .bank-details h3 {
+                font-size: 1.3rem;
+            }
+
+            .bank-details p {
+                font-size: 1rem;
+            }
+
+            .qr-section img {
+                max-width: 150px;
+            }
         }
 
         footer {
@@ -176,9 +222,86 @@
             margin-top: 2rem;
             font-family: 'Mukta', sans-serif;
         }
+
+        /* News Ticker styles */
+        .news-ticker-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-label {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            margin-left: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            z-index: 2;
+            white-space: nowrap;
+        }
+
+        .news-ticker {
+            display: inline-block;
+            animation: tickerMove 30s linear infinite;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+        .news-item {
+            display: inline-block;
+            padding-right: 50px;
+            position: relative;
+        }
+
+        .news-item:after {
+            content: "●";
+            margin-left: 20px;
+            color: white;
+        }
+
+        @keyframes tickerMove {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .news-ticker {
+                font-size: 1rem;
+                animation: tickerMove 25s linear infinite;
+            }
+
+            .news-label {
+                font-size: 0.9rem;
+                padding: 4px 10px;
+                margin-left: 10px;
+            }
+
+            .news-ticker-container {
+                padding: 8px 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="moving-text-container">
+        <div class="moving-text">
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
+        </div>
+    </div>
     <div class="sticky-wrapper">
         <header>
             <div class="header-logo">
@@ -228,15 +351,19 @@
             </div>
 
             <div class="bank-details">
-                <h3>बैंक विवरण</h3>
-                <p>बैंक का नाम: स्टेट बैंक ऑफ इंडिया</p>
-                <p>खाता धारक का नाम: श्री गौशाला पिलानी</p>
-                <p>खाता संख्या: XXXXX XXXXX XXXXX</p>
-                <p>IFSC कोड: SBIN XXXXX</p>
-                <p>शाखा: पिलानी, राजस्थान</p>
-                <div style="text-align: center; margin-top: 2rem;">
-                    <h3>QR कोड स्कैन करें</h3>
-                    <img src="images/qr code.svg" alt="Payment QR Code" style="max-width: 200px; margin: 1rem auto; display: block;">
+                <h3>Bank Account Details</h3>
+                <p><span class="highlight">Account Name:</span> Shree Gaushala Pilani</p>
+                <p><span class="highlight">Bank Name:</span> State Bank of India</p>
+                <p><span class="highlight">Account Number:</span> 61132212977</p>
+                <p><span class="highlight">IFSC Code:</span> SBIN0011309</p>
+                <p><span class="highlight">Branch:</span> Pilani, Rajasthan</p>
+                <p><span class="highlight">Account Type:</span> Current Account</p>
+                <p><span class="highlight">UPI ID:</span> gaushala@sbi</p>
+                <p style="margin-top: 1rem; color: var(--primary-color);">* Please mention 'Donation' in the transaction remarks</p>
+                
+                <div class="qr-section">
+                    <h3>स्कैन करें</h3>
+                    <img src="images/qr code.svg" alt="Payment QR Code">
                 </div>
             </div>
         </div>
