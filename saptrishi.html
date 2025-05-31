@@ -240,6 +240,72 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            z-index: 100;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger-line {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            /* Hamburger animation */
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: rotate(-45deg) translate(-8px, 6px);
+            }
+
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: rotate(45deg) translate(-8px, -6px);
+            }
+
+            nav a {
+                display: block;
+                text-align: center;
+            }
+
+            .moving-text {
+                font-size: 1.2rem;
+                animation: moveText 25s linear infinite;
+            }
+        }
     </style>
 </head>
 <body>
@@ -256,6 +322,11 @@
                 <img src="images/cow.jpeg" alt="गाय" class="cow-image">
                 <div class="logo">श्री गौशाला पिलानी</div>
             </div>
+            <button class="hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
         </header>
         <nav>
             <ul>
@@ -343,5 +414,24 @@
         <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
         <p>संपर्क: info@pilanigaushala.org</p>
     </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+        const navLinks = document.querySelectorAll('nav a');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
