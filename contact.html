@@ -65,6 +65,25 @@
             padding: 1rem;
         }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -215,6 +234,47 @@
         }
 
         @media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                display: block;
+                padding: 12px;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                transform: none;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
             .news-ticker {
                 font-size: 1rem;
                 animation: tickerMove 25s linear infinite;
@@ -228,6 +288,47 @@
 
             .news-ticker-container {
                 padding: 8px 0;
+            }
+        }
+
+        /* Moving text styles */
+        .moving-text-container {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
+        }
+
+        .moving-text {
+            display: inline-block;
+            animation: moveText 30s linear infinite;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            font-weight: 500;
+            padding-left: 100%;
+        }
+
+        .moving-text span {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .moving-text {
+                font-size: 1.2rem;
+                animation: moveText 25s linear infinite;
             }
         }
     </style>
@@ -248,6 +349,11 @@
             </div>
         </header>
         <nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="index.html">होम</a></li>
                 <li><a href="about.html">हमारे बारे में</a></li>
@@ -334,5 +440,24 @@
         <p>© 2024 श्री गौशाला पिलानी। सर्वाधिकार सुरक्षित।</p>
         <p>संपर्क: info@pilanigaushala.org</p>
     </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

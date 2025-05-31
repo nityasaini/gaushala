@@ -142,34 +142,31 @@
 
         .moving-text {
             display: inline-block;
-            animation: moveText 20s linear infinite;
+            animation: moveText 30s linear infinite;
             font-size: 1.5rem;
             white-space: nowrap;
             font-weight: 500;
+            padding-left: 100%;
         }
 
         .moving-text span {
             display: inline-block;
-            padding-right: 50px;
+            margin-right: 50px;
         }
 
         @keyframes moveText {
             0% {
-                transform: translateX(100%);
+                transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-200%);
             }
         }
 
         @media screen and (max-width: 768px) {
             .moving-text {
                 font-size: 1.2rem;
-                animation: moveText 15s linear infinite;
-            }
-
-            .moving-text-container {
-                padding: 8px 0;
+                animation: moveText 25s linear infinite;
             }
         }
 
@@ -248,7 +245,6 @@
 <body>
     <div class="moving-text-container">
         <div class="moving-text">
-            <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
             <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
             <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
             <span>ॐ श्री कृष्ण गोविंद हरे मुरारी हे नाथ नारायण वासुदेवा 🕉️</span>
